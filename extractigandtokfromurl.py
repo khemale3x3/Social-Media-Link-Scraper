@@ -1,3 +1,4 @@
+#IG & tiktok only
 # import time
 # import pandas as pd
 # from selenium import webdriver
@@ -12,7 +13,7 @@
 # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 
 # # Step 2: Load the Excel file that contains the URLs
-# df = pd.read_excel(r"C:\Users\ACER\Downloads\TEST UPDATE.xlsx")  # Replace with your actual file path
+# df = pd.read_excel(r"input\TEST UPDATE.xlsx")  # Replace with your actual file path
 
 # # Step 3: Function to extract Instagram and TikTok links only
 # def extract_instagram_tiktok_links(url):
@@ -63,7 +64,7 @@
 #     time.sleep(2)
 
 # # Step 5: Save the updated DataFrame to a new Excel file
-# output_file = r"C:\Users\ACER\Downloads\updated_profiles.xlsx"
+# output_file = r"output\updated_profiles.xlsx"
 # df.to_excel(output_file, index=False)
 # print(f"Updated Excel saved to {output_file}")
 
@@ -89,7 +90,7 @@ chrome_options.add_argument("--headless")  # Run in headless mode (no GUI)
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 
 # Step 2: Load the Excel file that contains the URLs
-df = pd.read_excel(r"C:\Users\ACER\Downloads\TEST UPDATE.xlsx")  # Replace with your actual file path
+df = pd.read_excel(r"input\TEST UPDATE.xlsx")  # Replace with your actual file path
 
 # Step 3: Function to extract Instagram, TikTok, Facebook, and Twitter links only
 def extract_social_media_links(url):
@@ -157,7 +158,7 @@ for index, row in df.iterrows():
     time.sleep(2)
 
 # Step 5: Save the updated DataFrame to a new Excel file
-output_file = r"C:\Users\ACER\Downloads\updated_profiles.xlsx"
+output_file = r"output\updated_profiles.xlsx"
 df.to_excel(output_file, index=False)
 print(f"Updated Excel saved to {output_file}")
 
